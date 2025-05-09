@@ -67,3 +67,10 @@ public class ReadExcelFileWithMap {
             if (headerRow == null) {
                 System.out.println("Error: Header row is null or empty.");
                 return n
+
+   // 3. Get the first sheet
+            Sheet sheet = workbook.getSheetAt(0);
+            if (sheet == null) {
+                System.out.println("Error: Sheet is null. The workbook may be empty.");
+                return null;
+            }
